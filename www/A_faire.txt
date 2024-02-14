@@ -1,0 +1,84 @@
+Consignes : https://github.com/DanYellow/cours/blob/main/integration-web-s2/sae-203/LISEZ-MOI.md
+
+Ce qu'il nous reste à faire :
+
+    -Obligatoire :
+
+Rajouter un favicon dans un css déjà require_once partout et en faire un différent pour le site et pour l'admin : check
+
+Trouver la solution pour afficher la bonne vidéo sur article.php : ANNULE PAS OBLIGATOIRE DE TOUTE FACON
+
+Améliorer la page équipe de redac: A AMELIORER ENCORE
+
+Vérifier les <br> 
+
+Vérifier les alt="" (à remplir si besoin mais pas obligatoire le plus important c'est qu'ils soient là)
+
+Mettre des commentaires explicatifs de code
+
+Réinitialiser les id dans la bdd
+
+Relire le code et vérifier les fautes
+
+Utiliser tailwind pour les éléments uniques
+
+Ajouter css transform : check
+
+Ajouter css transition : check
+
+Changer les balises <title> DE TOUTES LES PAGES POUR LE REFERENCEMENT CEST IMPORTANT
+
+Ajouter :after :before etc  
+(dans la page équipe de rédac genre un :before pour la présentation de l'auteur et :after affichage du dernier article crée en dessous de la boxe ?)
+
+Vérifier le bon envoi des mails à la fin du formulaire de contact mais aussi dans la réponse au msg : ?
+
+A la fin des formulaires dans admin : rediriger vers la page index de la liste en question.
+    // L'utilisateur retourne à la liste des éléments.
+    // Par exemple : 
+    // Je crée un article. Je soumets le formulaire. Je suis redirigé vers la liste d'articles grâce au code suivant.
+    $racineURL = pathinfo($_SERVER['REQUEST_URI']);
+    $pageRedirection = $racineURL['dirname'];
+    header("Location: $pageRedirection");
+
+    -Pas obligatoire :
+
+Session admin ? Page de connexion
+
+Si réponse au message dans admin/messages/index.php -> Affichage "Répondu" à côté du message, 
+juste à changer false en true dans la bdd si formulaire soumis
+
+Si suppression d'un article -> recharger la page instant : check
+
+
+Critères de notation :
+
+Intégration Web (HTML/CSS/javascript)
+
+    Qualité du code
+        Pas de classes CSS au nom étrange
+        Réutilisation des classes CSS
+            N'oubliez pas qu'une balise peut avoir plusieurs classes CSS
+        Organisation du code
+            Utiliser la structure déjà présente peut vous aider
+        Sémantique HTML :
+            Toute utilisation inappropriée de la balise <br> sera sanctionnée
+    Accessibilité
+        <img> avec attribut "alt" même vide
+        Valeur de la balise <title> qui change pour chaque page avec la valeur appropriée
+        Fichier(s) javascript sont chargés avant la fermeture de la balise <body>
+        Unité des police d'écriture en rem
+            Toute utilisation de l'unité px pour la propriété font-size sera sanctionnée, il faut utiliser l'unité rem
+                Conversion px -> rem : Diviser la valeur en pixels par 16 pour obtenir la valeur en rem
+        Voir plus de normes d'accessibilité
+    L'aspect final du site, comment il s'affiche dans un navigateur
+        Le site sera testé sur Firefox et/ou Chrome
+
+Développement Web (PHP/MySQL)
+
+    Qualité du code
+        Utilisation de la fonction php require_once()
+            Une partie du code fourni nécessite d'être optimisée avec la fonction require_once()
+        Utilisation de fonctions (quand c'est nécessaire)
+        Lecture et écriture de la base de données
+        Utilisation des paramètres d'url

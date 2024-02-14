@@ -1,0 +1,41 @@
+.titre-page {
+    font-weight: bold;
+    color: #333;
+
+  }
+
+  .image_article {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .chapo-article {
+    font-weight: bold;
+    color: #333;
+
+
+    
+  
+  }
+
+  .contenu-article {
+    
+    color: #333;
+    margin-top: 2rem;
+    text-align: left;
+
+    
+  } 
+
+
+  .article {
+    transition: transform 0.4s ease-in-out, background-color 1s ease-in-out;
+    background-color: white;
+  }
+  
+  .article:hover {
+    transform: scale(1.05);
+    background-color: #ffecff;
+  }
